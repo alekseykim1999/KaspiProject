@@ -12,8 +12,19 @@
 </head>
 <body>
     <h1>Testing JSP</h1>
+
+    <%
+        Integer visits = (Integer)session.getAttribute("count");
+        if(visits==null)
+            visits=1;
+    %>
+    <h1>Number Of Visits = <%=visits%></h1>
+
+
+    <% String answer = request.getParameter("name"); %>
     <p>
         <%@ page import="java.util.Date, kz.kaspi.lab.TestClass" %>
+        <%@ page import="testing.Cart" %>
 
         <% TestClass informator = new TestClass(); %>
         <%
@@ -25,8 +36,14 @@
 
         <%="I calculate JSP"%>
         <%= new Date()%>
-        <%=informator.getData()%>
+        <%=informator.getData(answer)%>
     </p>
+
+    <% Cart cart = (Cart)session.getAttribute("cart"); %>
+    <p>Name of Cart <%=cart.getName()%></p>
+    <p>Qunatity in Cart <%=cart.getQuantity()%></p>
+
+
 
 </body>
 </html>
