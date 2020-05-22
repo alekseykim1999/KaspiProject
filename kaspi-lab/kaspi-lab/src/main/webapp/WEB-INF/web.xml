@@ -34,6 +34,30 @@
 		<servlet-name>Calculate</servlet-name>
 		<url-pattern>/calculation</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>CreateCookies</servlet-name>
+		<servlet-class>cookies.CreateCookies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateCookies</servlet-name>
+		<url-pattern>/create</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetCookies</servlet-name>
+		<servlet-class>cookies.GetCookies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCookies</servlet-name>
+		<url-pattern>/checking</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteCookies</servlet-name>
+		<servlet-class>cookies.DeleteCookies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCookies</servlet-name>
+		<url-pattern>/deleting</url-pattern>
+	</servlet-mapping>
 
 
 

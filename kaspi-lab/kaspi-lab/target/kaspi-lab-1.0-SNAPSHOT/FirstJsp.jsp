@@ -13,7 +13,11 @@
 <body>
     <h1>Testing JSP</h1>
 
-    <% Integer visits = (Integer)session.getAttribute("count"); %>
+    <%
+        Integer visits = (Integer)session.getAttribute("count");
+        if(visits==null)
+            visits=1;
+    %>
     <h1>Number Of Visits = <%=visits%></h1>
 
 
