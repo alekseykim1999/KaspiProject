@@ -21,8 +21,10 @@ public class FirstServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Cart cart = (Cart)session.getAttribute("cart");
 
+
         String name_cart=request.getParameter("name");
         int quantity = Integer.parseInt(request.getParameter("quantity"));
+
 
         if(cart==null)
         {
@@ -31,6 +33,7 @@ public class FirstServlet extends HttpServlet {
             cart.setQuantity(quantity);
         }
         session.setAttribute("cart",cart);
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("/calculation");
         dispatcher.forward(request,response);
 

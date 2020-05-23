@@ -1,0 +1,7 @@
+DESKTOP-OT44A5H\NEWSERVER
+
+Tables - People, Position
+
+Position: id, Name
+
+People: Name, Surname, Gender, PhoneNum
